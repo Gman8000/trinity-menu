@@ -10,3 +10,4 @@ To get this project set up locally, follow these steps:
 2. CD into the root of the folder with `cd trinity-menu`.
 3. Install npm dependencies by running `npm install`.
 4. Start the local development web server by running `npm start`.
+
