@@ -1,0 +1,23 @@
+{
+  "name": "trinity-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gman8000/trinity-menu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gman8000/trinity-menu/issues"
+  },
+  "homepage": "https://github.com/Gman8000/trinity-menu#readme",
+  "dependencies": {
+    "serve": "^11.2.0"
+  }
+}
