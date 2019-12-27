@@ -1,6 +1,6 @@
 # Trinity Menu
 
-The purpose of this project is to learn. Learn how to set up a simple static website that uses HTML and CSS that shows the menu for the Trinity website. You can view the live version at (https://gerhardtjvr.github.io/trinity-menu/)[https://gerhardtjvr.github.io/trinity-menu/]
+The purpose of this project is to learn. Learn how to set up a simple static website that uses HTML and CSS that shows the menu for the Trinity website. You can view the live version at [https://gerhardtjvr.github.io/trinity-menu/](https://gerhardtjvr.github.io/trinity-menu/)
 
 ## Getting started
 
