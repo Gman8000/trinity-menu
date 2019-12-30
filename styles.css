@@ -4,7 +4,9 @@
   margin-right: auto;
 }
 
-.header {}
+.header {
+  padding-bottom: 30px;
+}
 
 .logo {
   background: #ccc;
