@@ -25,7 +25,8 @@
 }
 
 .menu-title {
-  font-size: 200px;
+  padding-bottom: -10px;
+  font-size:250px;
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
@@ -50,12 +51,14 @@
   margin-bottom: 50px;
   font-weight: 300;
   line-height: 1.1;
+  color: rgb(68, 17, 17);
 }
 
 .item {
   border-bottom: solid 1px #ccc;
   padding: 10px 0; 
   position: relative;
+  color: rgb(43, 13, 13);
 }
 
 .item-name {
@@ -63,11 +66,13 @@
   text-transform: uppercase;
   line-height: 1.2;
   padding-right: 60px;
+  color: rgb(43, 13, 13);
 }
 
 .item-description {
   line-height: 1.2;
   max-width: 80%;
+  color: rgb(43, 13, 13);
 }
 
 .item-price {
@@ -76,4 +81,17 @@
   right: 0;
   line-height: 1;
   font-size: 24px;
+  color: rgb(43, 13, 13);
+}
+
+.hint {
+  border:10px black
+  line-height1.5;
+  
+}
+.optional{
+  text-transform: uppercase;
+}
+.extra{
+font: size 12;
 }
