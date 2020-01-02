@@ -4,18 +4,9 @@
   margin-right: auto;
 }
 
-.header {
-  padding-bottom: 30px;
-}
-
-.logo {
-  background: #ccc;
-  width: 400px;
-  height: 200px;
-}
-
 .main-region {
   display: flex;
+  padding-top: 30px;
 }
 
 .sidebar {

@@ -1,47 +1,19 @@
 <?php
 
-$products = array(
-  array(
-    'name' => 'Espresso', 
-    'description' => 'Our recipe varies with each single origin to bring out the most flavourful expresso possible',
-    'price' => 22
-  ),
-  array(
-    'name' => 'Africano', 
-    'description' => 'Hot water with a double shot of our available single origin espresso',
-    'price' => 23
-  ),
-  array(
-    'name' => 'Espresso macchiato', 
-    'description' => 'Double shot of our available single origin espresso with a stain of steamed milk',
-    'price' => 24
-  ),
-  array(
-    'name' => 'Cortado', 
-    'description' => 'A stronger double shot of our available single origin espresso with equal partsteamed milk',
-    'price' => 24
-  ),
-  array(
-    'name' => 'Flat White', 
-    'description' => 'A stronger double shot of our available single origin espresso with more steamed milk than foam',
-    'price' => 27
-  ),
-  array(
-    'name' => 'Cappuccino', 
-    'description' => 'A double shot of our available single origin espresso with a third steamed milk topped with a third milk foam',
-    'price' => 27
-  ),
-  array(
-    'name' => 'Latte', 
-    'description' => 'A double shot of our available single origin espresso with more steamed milk and less milk foam',
-    'price' => 28
-  ),
-  array(
-    'name' => 'Mocha', 
-    'description' => 'A double shot of our available single origin espresso poured over chocolate topped with steam milk',
-    'price' => 32
-  )
-);
+$db_host = 'db';
+$db_username = 'root';
+$db_password = 'example';
+$db_name = 'trinity';
+
+$conn = new mysqli($db_host, $db_username, $db_password, $db_name);
+
+if(!$conn) {
+  die('Could not connect ' . mysql_error());
+}
+
+$result = $conn->query('SELECT * FROM product');
+$products = $result->fetch_all(MYSQLI_ASSOC);
+$conn->close();
 
 ?>
 <!doctype html>
@@ -55,9 +27,6 @@ $products = array(
   </head>
   <body>
     <div class="page">
-      <div class="header">
-        <div class="logo"></div>
-      </div>
       <div class="main-region">
         <div class="sidebar">
           <div class="menu-title">Menu</div>
@@ -67,9 +36,9 @@ $products = array(
             <div class="section-title">Espresso<br/> classics</div>
             <?php foreach($products as $product) { ?>
             <div class="item">
-              <div class="item-name"><?= $product['name'] ?></div>
-              <div class="item-description"><?= $product['description'] ?></div>
-              <div class="item-price">R <?= $product['price'] ?></div>
+              <div class="item-name"><?php echo $product['name'] ?></div>
+              <div class="item-description"><?php echo $product['description'] ?></div>
+              <div class="item-price">R <?php echo $product['price'] ?></div>
             </div>
             <?php } ?>
           </div>
