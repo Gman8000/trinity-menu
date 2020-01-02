@@ -1,5 +1,5 @@
 
-CREATE DATABASE `trinity` 
+CREATE DATABASE `trinity`;
 USE `trinity`;
 
 DROP TABLE IF EXISTS `product`;
