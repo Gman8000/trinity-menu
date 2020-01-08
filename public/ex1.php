@@ -10,12 +10,23 @@ $conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 if(!$conn) {
   die('Could not connect ' . mysql_error());
 }
-$result = $conn->query('SELECT * FROM product');
-$products = $result->fetch_all(MYSQLI_ASSOC);
+
+$query = $conn->query("SELECT * FROM product WHERE 'price' is <= 27");
+
+ if ($result){
+   $result = $query->fetch_all(MYSQLI_ASSOC);
+ }
+
+ while ($products = $query->fetch_all(MYSQLI_ASSOC); {
+  $products[] =$row;
+ }
+echo ($products);
 
 $conn->close();
 
 ?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,16 +38,19 @@ $conn->close();
   </head>
   <body>
     <h1>Products less than R 27</h1>
+    
+   <?php foreach($products as $product) { ?>
 
-<div class= id>id</div>
-<div class= name>name</div>
-<div class= price>price</div>
-<?php
-<ul></ul>
-  <ol></ol>
+          <?php echo $product['id'] ?>
+          <?php echo $product['name'] ?>
+        R <?php echo $product['price'] ?>
+            
+            <?php } ?>
+    
 
-?> 
+    
 
+  
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
