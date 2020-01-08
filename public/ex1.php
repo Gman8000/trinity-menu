@@ -29,8 +29,10 @@ $conn->close();
     <ul>
       <?php foreach($products as $product) { ?>
         <li>
+          <?php echo $product['id'] ?>     
           <?php echo $product['name'] ?>
-        </li>  
+        </li>
+       
       <?php } ?>
     </ul>
   </body>
